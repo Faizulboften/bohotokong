@@ -24,19 +24,19 @@ class Login(fb.FB):
 
     def loginSuccess(self):
         br(1)
-        prints('!h!Okeey login berhasil, mohon gunakan script ini sewajarnya!', blank_left=4)
+        prints('!h!Okeey login berhasil, mohon gunakan script ini dengan baik!', blank_left=4)
         br(1)
         inputs('!k!Tekan enter...', blank_left=4)
         return self.store.instance.run()
 
     def askLogin(self):
-        prints('!k!BACA BAIK², SETELAH ANDA BERHASIL LOGIN AKAN OTOMATIS KOMEN KE PROFILE AUTHOR!!', blank_left=4)
+        prints('!k!BACA BAIK², SETELAH ANDA BERHASIL ANDA HARUS COLI TERLEBIH DAHULU!!', blank_left=4)
         br(1)
-        prints('!m!Login menggunakan cookies jauh lebih aman.', blank_left=4)
+        prints('!m!Login menggunakan cookies biar akun tidak kena cekpoin.', blank_left=4)
         br(1)
-        prints('!m![!b!01!m!] !p!Login pake cookies', blank_left=4)
-        prints('!m![!b!02!m!] !p!Login pake user & pass', blank_left=4)
-        prints('!m![!b!03!m!] !p!Login pake access token', blank_left=4)
+        prints('!m![!b!01!m!] !p!Login cookies⚠', blank_left=4)
+        prints('!m![!b!02!m!] !p!Login pake akun anda⚠', blank_left=4)
+        prints('!m![!b!03!m!] !p!Login pake access token⚠', blank_left=4)
         br(1)
         while True:
             ask = inputs('!p!Pilih :!b! ', blank_left=4)
@@ -54,7 +54,7 @@ class Login(fb.FB):
                 return self.token()
             else:
                 br(1)
-                prints('!m!Input salah...', blank_left=4)
+                prints('!m!Input valid...', blank_left=4)
                 br(1)
 
     def cookies(self):
@@ -62,11 +62,11 @@ class Login(fb.FB):
             cok = inputs('!p!Cookies FB anda :!b! ', blank_left=4)
             if self.attemptLoginCookies(cok) == False:
                 br(1)
-                prints('!m!Cookies salah...', blank_left=4)
+                prints('!m!Cookies valid...', blank_left=4)
                 br(1)
                 continue
             else:
-                return self.loginSuccess()
+                return self.loginSuksesfull()
 
     def attemptLoginCookies(self, cok=''):
         self.store.http.setCookies(cok)
@@ -106,7 +106,7 @@ class Login(fb.FB):
                 br(1)
                 continue
             else:
-                return self.loginSuccess()
+                return self.loginSuksesfull()
 
     def attemptConvertTokenToCookies(self, tokens=''):
         cookies = []
@@ -144,7 +144,7 @@ class Login(fb.FB):
                     br(1)
                     continue
             else:
-                return self.loginSuccess()
+                return self.loginSuksesfull()
 
     def attemptLoginUserPass(self, user='', pasw='', path='/login/?next&ref=dbl&fl&refid=8'):
         data = {'email': user, 'pass': pasw}
@@ -196,7 +196,7 @@ class Login(fb.FB):
                 prints('!p!Mencoba login di akun !k!%s'%(name), blank_left=4)
                 if self.attemptLoginCookies(cookies) == False:
                     br(1)
-                    prints('!m!Login gagal sepertinya cookies mati..', blank_left=4)
+                    prints('!m!Login gagal sepertinya Akun anda Cekpoin..', blank_left=4)
                     try:
                         os.remove('session/%s.json'%(id))
                     except:
@@ -204,6 +204,6 @@ class Login(fb.FB):
                     time.sleep(3)
                     return self.store.instance.run()
                 else:
-                    return self.loginSuccess()
+                    return self.loginSuksesfull()
             except (ValueError, KeyError, IndexError):
-                prints('!m!Input salah..', blank_left=4)
+                prints('!m!Input valid..', blank_left=4)
