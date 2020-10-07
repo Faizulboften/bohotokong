@@ -15,14 +15,9 @@
 import platform, os, random, time
 
 __BANNER__ = '''
-  !b! ___ ___  ____   _____ 
-  !b!|   T   T|    \ |     | !m!(!p!MULTI BRUTE FORCE FACEBOOK!m!)
-  !b!| _   _ ||  o  )|   __j !m!-------------------------------
-  !b!|  \_/  ||     T|  l_   !h!Dev      !m!: !p!DulLah
-  !b!|   |   ||  O  ||   _]  !h!FB       !m!: !p!https//fb.me/dulahz
-  !b!|   |   ||     ||  T    !h!Github   !m!: !p!https://github.com/dz-id
-  !b!l___j___jl_____jl__j    !h!Version  !m!: !p!3.0
-'''
+  !b!▒█▀▒▄▀▄░█░▀█▀░█▒█░█▒░  !m!(!p!MULTI FUNGSI CRACKING AKUN!m!)                               
+  !b!░█▀░█▀█░█░█▄▄░▀▄█▒█▄▄  !m!------------------------------                                
+  '''
 
 osname = platform.system().lower()
 
