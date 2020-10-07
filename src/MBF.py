@@ -3,10 +3,10 @@
 
 #######################################################
 # File           : MBF.py                             #
-# Author         : DulLah                             #
-# Github         : https://github.com/dz-id           #
-# Facebook       : https://www.facebook.com/dulahz    #
-# Telegram       : https://t.me/DulLah                #
+# Author         : Faizul                             #
+# Github         : https://github.com/Faizu           #
+# Facebook       : https://www.facebook.com/Labold    #
+# Telegram       : https://t.me/Faizul                #
 # Python version : 3.8+                               #
 #######################################################
 #         RECODE? OKE CANTUMKAN NAMA PEMBUAT          #
@@ -32,15 +32,15 @@ class MBF:
                 return self.store.login.sessionLogin()
         if lib.isActive(self) == False:
             br(1)
-            prints('!m!Sepertinya cookies mati.', blank_left=4)
+            prints('!m!Sepertinya Akun Anda Cp.', blank_left=4)
             br(1)
-            inputs('!k!Tekan enter untuk login kembali..', blank_left=4)
+            inputs('!k!Tekan enter untuk login..', blank_left=4)
             return self.run()
         id = self.store.object['credentials']['id']
         name = self.store.object['credentials']['name']
         prints('!m!-!r!' * 55, blank_left=2)
         prints('!m![!b!>!m!] !p!Nama akun !m!:!k! %s!r!' %(name), blank_left=4)
-        prints('!m![!b!>!m!] !p!IDs       !m!:!k! %s!r!' %(id), blank_left=4)
+        prints('!m![!b!>!m!] !p!ID       !m!:!k! %s!r!' %(id), blank_left=4)
         prints('!m!-!r!' * 55, blank_left=2)
         for index in self.store.menu:
             prints(self.store.menu[index]['name'], blank_left=4)
@@ -62,7 +62,7 @@ class MBF:
         return function()
 
     def back(self):
-        inputs('!k!Tekan enter untuk kembali..', blank_left=4)
+        inputs('!k!Tekan enter untuk..', blank_left=4)
         return self.run()
 
     def clearDumpCache(self, count=0):
@@ -73,7 +73,7 @@ class MBF:
             br(1)
             return self.back()
         br(1)
-        prints('!m![ !b!LIST SEMUA CACHE DARI HASIL DUMP!r! !m!]', blank_left=4)
+        prints('!m![ !b!SEMUA CACHE DARI HASIL DUMP!r! !m!]', blank_left=4)
         br(1)
         for cache in list:
             count+=1
@@ -90,7 +90,7 @@ class MBF:
                     name = delete['name']
                     path = delete['path']
                     os.remove(path)
-                    prints('!h! - %s - Dihapus!r!' %(name), blank_left=6)
+                    prints('!h! - %s - Sukses terhapus!r!' %(name), blank_left=6)
                 except:
                     pass
             br(1)
@@ -101,7 +101,7 @@ class MBF:
                 name = list[int(e)-1]['name']
                 path = list[int(e)-1]['path']
                 os.remove(path)
-                prints('!h! - %s - Dihapus!r!' %(name), blank_left=6)
+                prints('!h! - %s - Sukses terhapus!r!' %(name), blank_left=6)
             except:
                 pass
         br(1)
@@ -111,18 +111,18 @@ class MBF:
         while True:
             ask = inputs('!p!Ingin melihat hasil CP/OK? !m![!p!CP/OK!m!]!p! : !b!', blank_left=4)
             if ask.lower() == 'cp':
-                data = lib.resultCrack(name='CP')
+                data = lib.resultAkun(name='CP')
                 break
             elif ask.lower() == 'ok':
-                data = lib.resultCrack(name='OK')
+                data = lib.resultAkun(name='OK')
                 break
             else:
                 br(1)
-                prints('!m!Input salah...', blank_left=4)
+                prints('!m!Input valid...', blank_left=4)
                 br(1)
         if len(data) == 0:
             br(1)
-            prints('!m!Belum ada hasil...', blank_left=4)
+            prints('!m!Hasil tidak di temukan...', blank_left=4)
             br(1)
             return self.back()
         br(1)
