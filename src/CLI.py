@@ -20,10 +20,13 @@ __BANNER__ = '''
 \t\033[90m -----------------------\033[94m\n
 !m!#############################################################
 !m!# Author         : Faizul Boften                            #
-!m!# Github         : https://gihub.com/bohotokong             #
+!m!# Github         : https://github.com/bohotokong            #
 !m!# Facebook       : Faizul                                   #
 !m!#############################################################
-  '''
+\n\t\033[90m~  ~  ~\033[92m┌∩┐\033[94m(\033[91m◣_◢\033[94m)\033[92m┌∩┐\033[90m~  ~  ~
+\t\033[00m FACEBOOK CRACKING V3
+\t\033[90m -----------------------\033[94m\n
+ '''
 
 osname = platform.system().lower()
 
