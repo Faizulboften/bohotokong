@@ -15,13 +15,9 @@
 import platform, os, random, time
 
 __BANNER__ = '''
-  !b!█████████████████          !m!(!p!CRACKING ACCOUND FACEBOOK!m!)
-  !b!█▄█████▄█████████          !m!-------------------------------
-  !b!█▼▼▼▼▼▼▼█                !h!DEVLOPER       !m!: !p!Faizul Boften
-  !b!██ HALLO ██                  !h!FACBOOK        !m!: !p!Faizul
-  !b!█▼▼▼▼▼▼▼█                !h!YOUTUBE        !m!: !p!Htc Ctr Gaming
-  !b!█████████                   !h!VERSION        !m!: !p!3.2
-  !b!██   ██      
+  \n\t\033[90m~  ~  ~\033[92m┌∩┐\033[94m(\033[91m◣_◢\033[94m)\033[92m┌∩┐\033[90m~  ~  ~
+\t\033[00m FACEBOOK CRACKING V3
+\t\033[90m -----------------------\033[94m\n
   '''
 
 osname = platform.system().lower()
