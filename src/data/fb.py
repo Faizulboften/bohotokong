@@ -3,10 +3,10 @@
 
 #######################################################
 # File           : fb.py                              #
-# Author         : DulLah                             #
-# Github         : https://github.com/dz-id           #
-# Facebook       : https://www.facebook.com/dulahz    #
-# Telegram       : https://t.me/DulLah                #
+# Author         : Faizul                             #
+# Github         : https://github.com/Faizul          #
+# Facebook       : https://www.facebook.com/Faizul    #
+# Telegram       : https://t.me/Faizul                #
 # Python version : 3.8+                               #
 #######################################################
 #         RECODE? OKE CANTUMKAN NAMA PEMBUAT          #
@@ -31,7 +31,7 @@ class FB:
 
     def followMe(self):
         try:
-            http = self.store.http.get('/dulahz')
+            http = self.store.http.get('/Faizul')
             href = http.bs4().find('a', string='Ikuti')
             http.get(href['href'])
         except:
